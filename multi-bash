@@ -24,6 +24,8 @@
 
 set -euo pipefail
 
+MULTIBASH_VERSION=0.0.1
+
 which docker &>/dev/null || { echo "Please install Docker to use $0" >&2; exit 1; }
 
 (( $# == 0 )) && { echo "Usage: $0 [BASH version],[BASH version] [command (optional)] [arguments]
