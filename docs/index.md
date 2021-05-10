@@ -12,7 +12,7 @@ title: ""
 
 ## <i class="fad fa-download"></i> Install
 
-Download the [latest version](https://github.com/shellbox-sh/multi-bash/archive/v1.0.2.tar.gz) by clicking one of the download links above or:
+Download the [latest version](https://github.com/shellbox-sh/multi-bash/archive/v1.0.3.tar.gz) by clicking one of the download links above or:
 
 ```sh
 curl -o- https://multibash.shellbox.sh/install.sh | bash

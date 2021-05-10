@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-MULTIBASH_VERSION=1.0.2
+MULTIBASH_VERSION=1.0.3
 
 which docker &>/dev/null || { echo "Please install Docker to use $0" >&2; exit 1; }
 
@@ -82,12 +82,17 @@ shift
 
 if [[ "$version" = *,* ]]
 then
+  declare -i lastReturnCode=0
+  declare -i lastFailedReturnCode=0
   IFS=, read -ra versions <<< "$version"
   for version in "${versions[@]}"
   do
     "$0" "$version" "$@"
+    lastReturnCode=$?
+    (( $lastReturnCode == 0 )) || lastFailedReturnCode=$lastReturnCode
     echo
   done
+  (( $lastFailedReturnCode == 0 )) && exit 0 || exit $lastFailedReturnCode
 else
   [[ "$version" =~ ^[0-9] ]] || { echo "BASH version must start with a number: '$version'" >&2; exit 1; }
 
