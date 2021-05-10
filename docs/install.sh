@@ -8,7 +8,7 @@ FILE_WITH_VERSION_VARIABLE="multi-bash"
 VERSION_VARIABLE="MULTIBASH_VERSION"
 API_LATEST_RELEASE_INFO_URL="https://api.github.com/repos/$REPO_ORG/$PROJECT_NAME/releases/latest"
 FILES_TO_COPY=("multi-bash")
-INSTALL_MESSAGE="Installed ☑️ multi-bash
+INSTALL_MESSAGE="Installed 🐧 multi-bash
 
 Files:
 » multi-bash - Run command against multiple versions of BASH
