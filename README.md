@@ -6,7 +6,7 @@
 
 ## ⬇️ Install
 
-Download the [latest version](https://github.com/shellbox-sh/multi-bash/archive/v1.0.1.tar.gz) or run:
+Download the [latest version](https://github.com/shellbox-sh/multi-bash/archive/v1.0.2.tar.gz) or run:
 
 ```sh
 curl -o- https://multibash.shellbox.sh/install.sh | bash

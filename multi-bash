@@ -22,9 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-set -euo pipefail
-
-MULTIBASH_VERSION=1.0.1
+MULTIBASH_VERSION=1.0.2
 
 which docker &>/dev/null || { echo "Please install Docker to use $0" >&2; exit 1; }
 
