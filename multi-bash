@@ -28,10 +28,26 @@ MULTIBASH_VERSION=0.0.1
 
 which docker &>/dev/null || { echo "Please install Docker to use $0" >&2; exit 1; }
 
-(( $# == 0 )) && { echo "Usage: $0 [BASH version],[BASH version] [command (optional)] [arguments]
+(( $# == 0 )) || [ "$1" = --help ] && { echo "Usage: $0 [BASH version],[BASH version] [command (optional)] [arguments]
 
 If command is provided, it will be run in a Docker container of the specified BASH version(s).
 If command is not provided, it will start an interactive BASH session. Use 'exit' to exit.
+
+# Example
+
+  ./multi-bash 3.2.57,5.0 bash --version
+
+    3.2.57
+    GNU bash, version 3.2.57(1)-release (x86_64-pc-linux-musl)
+    Copyright (C) 2007 Free Software Foundation, Inc.
+
+    5.0
+    GNU bash, version 5.0.18(1)-release (x86_64-pc-linux-musl)
+    Copyright (C) 2019 Free Software Foundation, Inc.
+    License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+    
+    This is free software; you are free to change and redistribute it.
+    There is NO WARRANTY, to the extent permitted by law.
 
 # BASH Docker Images
 
@@ -44,7 +60,7 @@ If command is not provided, it will start an interactive BASH session. Use 'exit
   
   To remove a locally installed BASH Docker container image for a specific BASH version, run:
   
-    docker image rm bash:4.4
+    docker rmi bash:4.4
 
 # BASH Versions Available
 
@@ -72,6 +88,7 @@ then
   for version in "${versions[@]}"
   do
     "$0" "$version" "$@"
+    echo
   done
 else
   [[ "$version" =~ ^[0-9] ]] || { echo "BASH version must start with a number: '$version'" >&2; exit 1; }
@@ -94,6 +111,7 @@ else
     echo "Pulling image from Docker Hub..."
     docker pull "bash:$version"
     (( $? == 0 )) || { echo "Docker pull failed" >&2; exit 1; }
+    echo
   fi
 
   startCommand=

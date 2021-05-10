@@ -10,11 +10,16 @@ API_LATEST_RELEASE_INFO_URL="https://api.github.com/repos/$REPO_ORG/$PROJECT_NAM
 FILES_TO_COPY=("multi-bash")
 INSTALL_MESSAGE="Installed ☑️ multi-bash
 
-- multi-bash - Run command against multiple versions of BASH
+Files:
+» multi-bash - Run command against multiple versions of BASH
 
-Run 'multi-bash --help' for usage instructions.
+For usage instructions, run:
+» ./multi-bash --help
 
-Visit https://multibash.shellbox.sh for website documentation!
+💡 Tip: You may want to add multi-bash to a shared folder
+and add that folder to your PATH (to run from anywhere)
+
+Visit https://multibash.shellbox.sh for more information
 "
 ########################
 
@@ -188,4 +193,4 @@ run_install() {
   print_footer
 }
 
-run_install
+[ "$0" = "${BASH_SOURCE[0]}" ] && run_install
