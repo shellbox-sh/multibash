@@ -193,4 +193,4 @@ run_install() {
   print_footer
 }
 
-[ "$0" = "${BASH_SOURCE[0]}" ] && run_install
+run_install
