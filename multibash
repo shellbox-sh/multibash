@@ -22,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-MULTIBASH_VERSION=1.0.3
+MULTIBASH_VERSION=2.0.0
 
 which docker &>/dev/null || { echo "Please install Docker to use $0" >&2; exit 1; }
 
@@ -33,7 +33,7 @@ If command is not provided, it will start an interactive BASH session. Use 'exit
 
 # Example
 
-  ./multi-bash 3.2.57,5.0 bash --version
+  ./multibash 3.2.57,5.0 bash --version
 
     3.2.57
     GNU bash, version 3.2.57(1)-release (x86_64-pc-linux-musl)

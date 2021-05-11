@@ -1,4 +1,4 @@
-# 🐧 `$ multi-bash`
+# 🐧 `$ multibash`
 
 > _Verify your shell scripts work across multiple versions of BASH!_
 
@@ -6,7 +6,7 @@
 
 ## ⬇️ Install
 
-Download the [latest version](https://github.com/shellbox-sh/multi-bash/archive/v1.0.3.tar.gz) or run:
+Download the [latest version](https://github.com/shellbox-sh/multibash/archive/v2.0.0.tar.gz) or run:
 
 ```sh
 curl -o- https://multibash.shellbox.sh/install.sh | bash
@@ -15,7 +15,7 @@ curl -o- https://multibash.shellbox.sh/install.sh | bash
 ## 🏃🏿‍♀️ Run
 
 ```sh
-./multi-bash 3.2.57 bash --version
+./multibash 3.2.57 bash --version
 
 BASH image not installed locally for version: 3.2.57
 
@@ -32,7 +32,7 @@ Copyright (C) 2007 Free Software Foundation, Inc.
 The Docker image will only download if it is not already downloaded:
 
 ```sh
-./multi-bash 5.0,3.2.57 bash --version
+./multibash 5.0,3.2.57 bash --version
 
 5.0
 GNU bash, version 5.0.18(1)-release (x86_64-pc-linux-musl)
@@ -47,10 +47,10 @@ GNU bash, version 3.2.57(1)-release (x86_64-pc-linux-musl)
 Copyright (C) 2007 Free Software Foundation, Inc.
 ```
 
-Run `multi-bash` without any commands to start an interactive Bash shell:
+Run `multibash` without any commands to start an interactive Bash shell:
 
 ```sh
-./multi-bash 4.4
+./multibash 4.4
 
 4.4
 bash-4.4# echo "Hello, world"
@@ -60,7 +60,7 @@ bash-4.4#
 
 ## 🚢 Docker
 
-`multi-bash` runs using [Docker](https://www.docker.com/) and the [official bash image](https://hub.docker.com/_/bash).
+`multibash` runs using [Docker](https://www.docker.com/) and the [official bash image](https://hub.docker.com/_/bash).
 
  - [https://hub.docker.com/\_/bash](https://hub.docker.com/_/bash)
 
@@ -68,7 +68,7 @@ You can find instructions for installing Docker at:
 
 - [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
 
-You can find all of the versions of Bash supported by `multi-bash` at:
+You can find all of the versions of Bash supported by `multibash` at:
 
  - [https://hub.docker.com/\_/bash](https://hub.docker.com/_/bash)
 
@@ -77,9 +77,9 @@ You can find all of the versions of Bash supported by `multi-bash` at:
 ## 📖 Documentation
 
 ```
-./multi-bash --help
+./multibash --help
 
-Usage: ./multi-bash [BASH version],[BASH version] [command (optional)] [arguments]
+Usage: ./multibash [BASH version],[BASH version] [command (optional)] [arguments]
 
 If command is provided, it will be run in a Docker container of the specified BASH version(s).
 If command is not provided, it will start an interactive BASH session. Use 'exit' to exit.

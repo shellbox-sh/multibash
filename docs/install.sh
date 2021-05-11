@@ -3,20 +3,20 @@
 ########################
 EMOJI="🐧"
 REPO_ORG="shellbox-sh"
-PROJECT_NAME="multi-bash"
-FILE_WITH_VERSION_VARIABLE="multi-bash"
+PROJECT_NAME="multibash"
+FILE_WITH_VERSION_VARIABLE="multibash"
 VERSION_VARIABLE="MULTIBASH_VERSION"
 API_LATEST_RELEASE_INFO_URL="https://api.github.com/repos/$REPO_ORG/$PROJECT_NAME/releases/latest"
-FILES_TO_COPY=("multi-bash")
-INSTALL_MESSAGE="Installed 🐧 multi-bash
+FILES_TO_COPY=("multibash")
+INSTALL_MESSAGE="Installed 🐧 multibash
 
 Files:
-» multi-bash - Run command against multiple versions of BASH
+» multibash - Run command against multiple versions of BASH
 
 For usage instructions, run:
-» ./multi-bash --help
+» ./multibash --help
 
-💡 Tip: You may want to add multi-bash to a shared folder
+💡 Tip: You may want to add multibash to a shared folder
 and add that folder to your PATH (to run from anywhere)
 
 Visit https://multibash.shellbox.sh for more information
